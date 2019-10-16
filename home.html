@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="https://www.menstrual-matters.com/blog/">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+
+        </article>
+
+    {% endfor %}
+    <div  id = "quiz">
+
+      <h1>Take a quiz!</h1><br>
+      1)Why do you want to use this app<br>
+      <input type="radio" name="question1" value="question " />Stock up Reminders<br>
+      <input type="radio" name="question1" value="question"/>Diet during Periods<br>
+      <input type="radio" name="question1" value="question"/>Infoboxes<br>
+      <input type="radio" name="question1" value="question"/>Others<br>
+
+</div>
+{% endblock content %}
